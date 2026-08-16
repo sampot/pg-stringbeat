@@ -4,37 +4,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#100d22" />
-  <meta name="description" content="跟著六十秒完整譜面撥動 E、A、D、G 四弦，維持連擊穿越夜海。" />
-  <title>弦上夜航</title>
+  <meta name="description" content="用 A、S、D、F 或觸控撥動四弦，跟著三首完整譜面維持節奏。" />
+  <title>琴弦節拍</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div class="ambience" aria-hidden="true"><i></i><i></i><i></i></div>
   <main>
     <header class="topbar">
-      <div><p class="eyebrow">FOUR STRINGS / 120 NOTES</p><h1>弦上夜航</h1></div>
-      <button id="sound" class="quiet" type="button" aria-pressed="false">音樂：關</button>
+      <div><p class="eyebrow">FOUR STRINGS · RHYTHM</p><h1>琴弦節拍</h1></div>
+      <button id="sound" class="quiet" type="button" aria-pressed="true">聲音：開</button>
     </header>
     <section id="lobby" class="lobby panel">
       <div class="seal" aria-hidden="true">♬</div>
-      <p>跟著六十秒完整譜面撥動 E、A、D、G 四弦，維持連擊穿越夜海。</p>
-      <div class="record"><span>場域最佳</span><strong id="best">0</strong></div>
-      <button id="start" class="primary" type="button">開始遊戲</button>
+      <p>音符抵達發光判定線時，按 A／S／D／F 或直接觸碰琴弦。長音要按住。</p>
+      <label>曲目<select id="song"></select></label>
+      <label>難度<select id="difficulty"></select></label>
+      <div class="record"><span>本譜最佳</span><strong id="best">—</strong></div>
+      <button id="start" class="primary" type="button">開始演奏</button>
     </section>
     <section id="game" hidden>
       <div id="hud" class="hud" aria-label="遊戲狀態"></div>
       <section class="stage panel">
-        <div id="board" class="board" aria-label="遊戲場景"></div>
+        <div id="board" class="board" aria-label="四弦譜面"></div>
         <div class="progress" aria-hidden="true"><i id="progress"></i></div>
       </section>
       <p id="message" class="message" role="status" aria-live="polite"></p>
       <section id="details" class="details panel"></section>
-      <div id="actions" class="actions"></div>
+      <div id="controls" class="string-controls" aria-label="琴弦控制"></div>
+      <div class="actions"><button id="pause" type="button">暫停</button><button id="quit" type="button">選曲</button></div>
     </section>
     <footer><button id="help" class="text-button" type="button">玩法</button><a href="./ATTRIBUTION.md">素材署名</a></footer>
   </main>
   <section id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
-    <div class="sheet-card"><p class="eyebrow">FOUR STRINGS / 120 NOTES</p><h2 id="sheet-title">玩法</h2><div id="sheet-body"></div><button id="sheet-close" class="primary" type="button">知道了</button></div>
+    <div class="sheet-card"><p class="eyebrow">FOUR STRINGS · RHYTHM</p><h2 id="sheet-title">玩法</h2><div id="sheet-body"></div><button id="sheet-close" class="primary" type="button">知道了</button></div>
   </section>
   <script type="module" src="./app.js"></script>
 </body>
