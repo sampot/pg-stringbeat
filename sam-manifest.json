@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "rev": "4f4abd9",
+  "files": [
+    "app.js",
+    "assets/audio/click.ogg",
+    "assets/audio/combo.ogg",
+    "assets/audio/count.ogg",
+    "assets/audio/lose.ogg",
+    "assets/audio/miss.ogg",
+    "assets/audio/perfect.ogg",
+    "assets/audio/snap.ogg",
+    "assets/audio/stray.ogg",
+    "assets/audio/win.ogg",
+    "assets/fonts/Cubic_11.woff2",
+    "assets/images/glow.png",
+    "assets/images/spark.png",
+    "assets/images/trace.png",
+    "assets/licenses/cubic-11-OFL.txt",
+    "assets/licenses/cubic-11-SOURCE.txt",
+    "assets/licenses/kenney-particle-pack.txt",
+    "assets/licenses/oga-512-8bit-sfx-LICENSE.txt",
+    "audio.js",
+    "functions.js",
+    "game.js",
+    "index.html",
+    "persist.js",
+    "styles.css"
+  ]
+}
